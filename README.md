@@ -1,1 +1,1 @@
-para mais informaçoes ver o ficheiro master
+para mais informaçoes ver a pasta master
