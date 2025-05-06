@@ -1,4 +1,4 @@
-# LinkTree Personalizado
+# Género de Linktree personalizado
 
 Um site de links pessoal moderno e elegante, inspirado no LinkTree, construído com React, TypeScript e Tailwind CSS.
 
