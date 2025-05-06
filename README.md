@@ -1,1 +1,1 @@
-as minhas ligaçoes
+para mais informaçoes ver o ficheiro master
