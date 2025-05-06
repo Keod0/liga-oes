@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .rotate-x-90 {
+    transform: rotateX(90deg);
+  }
+  
+  .rotate-y-90 {
+    transform: rotateY(90deg);
+  }
+  
+  .rotate-cube {
+    animation: rotate-cube 20s linear infinite;
+  }
+}
+
+@keyframes rotate-cube {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotateX(25deg) rotateY(25deg);
+  }
+  50% {
+    transform: translateY(-20px) rotateX(25deg) rotateY(25deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes line-float {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(var(--rotation));
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(var(--translate-y)) translateX(var(--translate-x)) rotate(var(--rotation));
+  }
+}
+
+.animate-line-float-1 { animation: line-float 8s ease-in-out infinite; --translate-y: 100px; --translate-x: 50px; --rotation: 45deg; }
+.animate-line-float-2 { animation: line-float 7s ease-in-out infinite; --translate-y: -120px; --translate-x: -60px; --rotation: -30deg; }
+.animate-line-float-3 { animation: line-float 9s ease-in-out infinite; --translate-y: 80px; --translate-x: -40px; --rotation: 60deg; }
+.animate-line-float-4 { animation: line-float 6s ease-in-out infinite; --translate-y: -90px; --translate-x: 70px; --rotation: -45deg; }
+.animate-line-float-5 { animation: line-float 8.5s ease-in-out infinite; --translate-y: 110px; --translate-x: -55px; --rotation: 30deg; }
+.animate-line-float-6 { animation: line-float 7.5s ease-in-out infinite; --translate-y: -100px; --translate-x: -45px; --rotation: -60deg; }
+.animate-line-float-7 { animation: line-float 9.5s ease-in-out infinite; --translate-y: 95px; --translate-x: 65px; --rotation: 35deg; }
+.animate-line-float-8 { animation: line-float 6.5s ease-in-out infinite; --translate-y: -85px; --translate-x: -75px; --rotation: -40deg; }
+.animate-line-float-9 { animation: line-float 8.2s ease-in-out infinite; --translate-y: 105px; --translate-x: -35px; --rotation: 55deg; }
+.animate-line-float-10 { animation: line-float 7.8s ease-in-out infinite; --translate-y: -115px; --translate-x: 45px; --rotation: -50deg; }
